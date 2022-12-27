@@ -1,0 +1,5 @@
+package kr.go.gov.controller;
+
+public class SampleController {
+
+}
