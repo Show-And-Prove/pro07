@@ -17,7 +17,7 @@
 	<resources mapping="/common/**" location="/WEB-INF/views/common" />
 	<resources mapping="/include/**" location="/WEB-INF/views/include" />
 	<resources mapping="/users/**" location="/WEB-INF/views/users" />
-	<resources mapping="/notice/**" location="/WEB-INF/views/notice" />
+	<resources mapping="/board/**" location="/WEB-INF/views/board" />
 	<resources mapping="/util/**" location="/WEB-INF/views/util" />
 	<resources mapping="/qna/**" location="/WEB-INF/views/qna" />
 	<resources mapping="/data/**" location="/WEB-INF/views/data" />

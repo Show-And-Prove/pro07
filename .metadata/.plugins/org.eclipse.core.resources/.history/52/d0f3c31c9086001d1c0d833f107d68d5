@@ -1,0 +1,31 @@
+package kr.go.puac.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.go.puac.dto.BoardDTO;
+import kr.go.puac.service.BoardService;
+
+@Controller
+@RequestMapping("/board/*")
+public class BoardController {
+
+	@Autowired
+	BoardService boardService;
+	
+	@GetMapping("list")
+	public String boardList(Model model) throws Exception {
+		List<BoardDTO> boardList = boardService.boardList();
+		model.addAttribute(boardList);
+		return "board/list";
+	}
+	
+	
+	
+	
+}

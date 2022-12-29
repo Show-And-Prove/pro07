@@ -1,0 +1,5 @@
+package kr.go.puac.model;
+
+public class BoardDAOImpl {
+
+}

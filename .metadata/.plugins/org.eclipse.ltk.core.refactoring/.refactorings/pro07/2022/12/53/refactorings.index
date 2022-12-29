@@ -8,3 +8,8 @@
 1672131413081	Rename package 'kr.go.gov.controller'
 1672131423911	Rename package 'kr.go.gov.config'
 1672131461568	Rename package 'kr.go.gov'
+1672217798131	Rename resource 'notice'
+1672301018460	Delete element
+1672301284511	Rename resource 'BoardMapper.xml'
+1672303322082	Rename resource 'list.jsp'
+1672303579858	Rename resource 'detail.jsp'

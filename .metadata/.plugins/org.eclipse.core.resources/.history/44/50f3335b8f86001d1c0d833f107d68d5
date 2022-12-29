@@ -1,0 +1,32 @@
+package kr.go.puac.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import kr.go.puac.dto.BoardDTO;
+
+@Service
+public class BoardServiceImpl implements BoardService {
+
+	@Override
+	public List<BoardDTO> boardList() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BoardDTO boardDetail(int bid) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void writeBoard(BoardDTO board) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+}

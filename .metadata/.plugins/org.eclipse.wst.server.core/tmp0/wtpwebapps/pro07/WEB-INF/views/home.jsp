@@ -18,5 +18,6 @@
 
 <P>  The time on the server is ${serverTime}. </P>
 <p><a href="${path1 }sample/list">sample list</a></p>
+<p><a href="${path1 }board/list">board list</a></p>
 </body>
 </html>

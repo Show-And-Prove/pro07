@@ -1,0 +1,5 @@
+package kr.go.puac.service;
+
+public interface BoardService {
+
+}
