@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+	<!-- id, pw, name, email, tel, birth, addr1, addr2, postcode, regdate -->
+	<select id="memberList" resultType="kr.go.puac.dto.MemberDTO">
+		select * from member
+	</select>
+	
+	
+	<!-- 회원 목록 -->
+	<select id="memberCount" resultType="integer">
+		select count(*) from member
+	</select>
+	
+	<!-- 회원 정보 보기 -->
+	<select id="getMember" resultType="kr.go.puac.dto.MemberDTO">
+		select * from member where id=#{id}
+	</select>
+	
+	<!-- 로그인 : 컨트롤러에서 처리 -->
+	<select id="signIn" resultType="kr.go.puac.dto.MemberDTO">
+		select * from member where id = #{id }
+	</select>
+	
+	<!-- 로그인 : DAO에서 처리 -->
+	<select id="loginCheck" resultType="kr.go.puac.dto.MemberDTO">
+		select id, pw, name from member where id = #{id }
+	</select>
+	
+	<!-- 로그인 : AJax로 로그인 처리 -->	
+	<select id="login" resultType="kr.go.puac.dto.MemberDTO">
+		select id, pw, name from member where id = #{id }
+	</select>	
+	
+	<!-- 회원 가입 : dao에서 insert("member.memberInsert", mdto) -->
+	<!-- view에서 birth 입력한 varchar값을 date로 형변환 -->
+	<insert id="memberInsert">
+		insert into member values (#{id}, #{pw}, #{name}, #{email}, #{tel}, cast(#{birth} as DATE), #{addr1}, #{addr2}, #{postcode}, default)
+	</insert>
+	
+	<!-- 회원 정보 변경 : dao에서 update("member.memberUpdate", mdto) -->
+	<update id="memberUpdate">
+		update member 
+		set 
+			pw=#{pw }, email=#{email}, tel=#{tel}, 
+			addr1=#{addr1 }, addr2=#{addr2 }, postcode=#{postcode}
+		where id = #{id}
+	</update>
+	
+	<!-- 회원 탈퇴 : dao에서 delete("member.memberDelete", userid) -->	
+	<delete id="memberDelete">
+		delete from member where id=#{id }	
+	</delete>
+
+</mapper>

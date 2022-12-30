@@ -14,18 +14,26 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	
 	<resources mapping="/common/**" location="/WEB-INF/views/common" />
 	<resources mapping="/include/**" location="/WEB-INF/views/include" />
-	<resources mapping="/users/**" location="/WEB-INF/views/users" />
 	<resources mapping="/board/**" location="/WEB-INF/views/board" />
 	<resources mapping="/util/**" location="/WEB-INF/views/util" />
+	<resources mapping="/data/**"	 location="/WEB-INF/views/data" />
+	<resources mapping="/member/**" location="/WEB-INF/views/member" />
+	
+	
+	<resources mapping="/intro/**" location="/WEB-INF/views/intro" />
+	<resources mapping="/free/**" location="/WEB-INF/views/free" />
 	<resources mapping="/qna/**" location="/WEB-INF/views/qna" />
-	<resources mapping="/data/**" location="/WEB-INF/views/data" />
-	<resources mapping="/reservate/**" location="/WEB-INF/views/reservate" />
-	<resources mapping="/research/**" location="/WEB-INF/views/research" />
+	
+	
+	<!-- 관리자페이지 -->
+	<resources mapping="/admin/**" location="/WEB-INF/views/admin" />
 	
 	<!-- test -->
 	<resources mapping="/sample/**" location="/WEB-INF/views/sample" />
+	
 
 	
 
