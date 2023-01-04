@@ -1,0 +1,6 @@
+package kr.go.puac.model;
+
+public interface QnaDAO {
+
+	public List<QnaDTO>
+}

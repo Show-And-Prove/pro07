@@ -1,5 +1,0 @@
-package kr.go.gov.model;
-
-public interface SampleDAO {
-
-}

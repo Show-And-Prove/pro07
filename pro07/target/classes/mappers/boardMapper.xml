@@ -4,7 +4,7 @@
 
 	<!-- 목록 -->
 	<select id="boardList" resultType="kr.go.puac.dto.BoardDTO">
-		select * from board
+		select * from board order by bid desc
 	</select>
 	
 	<!-- 내용 -->
@@ -12,5 +12,16 @@
 		select * from board where bid=#{bid}
 	</select>
 	
+	<!-- 작성 -->
+	<insert id="boardInsert">
+		insert into board values (default, #{title}, #{content}, default, default)
+	</insert>
 
+	<!-- 수정 -->
+	<update id="boardEdit">
+		update board 
+			set 
+			title=#{title}, content=#{content}
+		where bid=#{bid} 
+	</update>
 </mapper>

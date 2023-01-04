@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<list key="installedFeatures">
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
+		<item value="net.sourceforge.pmd.eclipse:4.42.0.v20221231-1753-r"/>
 		<item value="org.aspectj:1.9.2.202002051807"/>
 		<item value="org.eclipse.ajdt:2.2.4.202002051807"/>
 		<item value="org.eclipse.buildship:3.1.3.v20191118-1057"/>
@@ -104,4 +105,11 @@
 		<item value="org.springsource.sts.package:3.9.12.202003181024-RELEASE-e415"/>
 		<item value="org.springsource.sts:3.9.12.202003181024-RELEASE"/>
 	</list>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="437"/>
+		<item key="DIALOG_Y_ORIGIN" value="137"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
 </section>

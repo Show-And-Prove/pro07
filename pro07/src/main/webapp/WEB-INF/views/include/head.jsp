@@ -40,3 +40,9 @@
   	.nav>li>a:focus, .nav>li>a:hover { color: #222; }
   	.navbar-inverse .navbar-nav>li>a { color: #222; }
   	</style>
+  	
+  	<!-- footer -->
+  	<style>
+	.footer-logo { width: 200px; height: 40px; }
+  	</style>
+  	

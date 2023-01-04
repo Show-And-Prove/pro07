@@ -1,0 +1,9 @@
+package kr.go.puac.model;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class QnaDAOImpl implements QnaDAO {
+
+	
+}

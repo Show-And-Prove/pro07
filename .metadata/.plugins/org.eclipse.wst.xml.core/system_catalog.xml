@@ -180,4 +180,7 @@
   <public publicId="-//SPRING//DTD BEAN//EN" uri="platform:/plugin/org.springframework.beans/org/springframework/beans/factory/xml/spring-beans.dtd" webURL="https://www.springframework.org/dtd/spring-beans.dtd"/>
   <public publicId="-//SPRING//DTD BEAN 2.0//EN" uri="jar:file:/D:/min/sts/sts4/sts-bundle/sts-3.9.12.RELEASE/plugins/org.springframework.beans_4.3.23.20190313-CI.jar!/org/springframework/beans/factory/xml/spring-beans-2.0.dtd" webURL="https://www.springframework.org/dtd/spring-beans-2.0.dtd"/>
   <public publicId="-//LOG4J//DTD LOG4J//EN" uri="jar:file:/D:/min/sts/sts4/sts-bundle/sts-3.9.12.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_3.9.12.202003180611-RELEASE.jar!/dtd/log4j-1.2.dtd" webURL="https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
+  <public id="ruleset_2_0_0" publicId="http://pmd.sourceforge.net/ruleset/2.0.0" uri="jar:file:/D:/min/sts/sts4/sts-bundle/sts-3.9.12.RELEASE/configuration/org.eclipse.osgi/902/0/.cp/target/lib/pmd-core.jar!/ruleset_2_0_0.xsd"/>
+  <public id="report_2_0_0" publicId="http://pmd.sourceforge.net/report/2.0.0" uri="jar:file:/D:/min/sts/sts4/sts-bundle/sts-3.9.12.RELEASE/configuration/org.eclipse.osgi/902/0/.cp/target/lib/pmd-core.jar!/report_2_0_0.xsd"/>
+  <public id="rule-tests_1_0_0" publicId="http://pmd.sourceforge.net/rule-tests" uri="jar:file:/D:/min/sts/sts4/sts-bundle/sts-3.9.12.RELEASE/plugins/net.sourceforge.pmd.eclipse.plugin_4.42.0.v20221231-1753-r.jar!/target/schema/rule-tests_1_0_0.xsd"/>
 </catalog>

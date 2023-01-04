@@ -5,6 +5,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path1" value="${pageContext.request.contextPath }" />
+<!-- 1. 회원가입후 공지사항 글 열람, 비회원은 볼 수 없음 -->
+<!-- 2. 관리자로 로그인하여 .. -->
+<!-- 3. 일반회원은 자유게시판, qna게시판에 글을 작성하고 삭제할 수 있다. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -179,6 +182,10 @@
 	    display: none;
 	}	
 	</style>
+	
+	<style>
+	.footer-logo { width: 200px; height: 40px; }
+	</style>
 
 	<title>Insert title here</title>
 	
@@ -231,7 +238,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 			<c:if test="${empty sid }">
 	        	<li><a href="${path1 }/member/loginForm"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
-          		<li><a href="${path1 }/member/join">회원가입</a></li>
+          		<li><a href="${path1 }/member/agree">회원가입</a></li>
         	</c:if>
         	<c:if test="${not empty sid }">  
           		<li><a href="${path1 }/member/logout">로그아웃</a></li>
@@ -355,7 +362,7 @@ $(document).ready(function(){
 });
 </script>
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-left">
 	<p class="footer_logo"><img class="footer-logo" src="${path1 }/resources/image/footer_logo.png" alt="하단로고"/></p>
 	<p class="address">04605 서울특별시 중구 장충단로 84 민주평화통일자문회의사무처 ㅣ 전화번호 (주간) 02-2250-2300 / (야간) 02-2250-2280<br/>Copyright© THE PEACEFUL UNIFICATION ADVISORY COUNCIL. All Rights Reserved.</p>
 </footer>

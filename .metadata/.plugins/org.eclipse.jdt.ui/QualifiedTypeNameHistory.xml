@@ -5,7 +5,7 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="javax.inject.Inject"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
 </qualifiedTypeNameHistroy>

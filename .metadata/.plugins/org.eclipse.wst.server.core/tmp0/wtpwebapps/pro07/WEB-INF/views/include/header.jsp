@@ -51,7 +51,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 			<c:if test="${empty sid }">
 	        	<li><a href="${path1 }/member/loginForm"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
-          		<li><a href="${path1 }/member/join">회원가입</a></li>
+          		<li><a href="${path1 }/member/agree">회원가입</a></li>
         	</c:if>
         	<c:if test="${not empty sid }">  
           		<li><a href="${path1 }/member/logout">로그아웃</a></li>
