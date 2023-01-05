@@ -15,9 +15,27 @@ public class QnaServiceImpl implements QnaService {
 	QnaDAO qnaDAO;
 
 	@Override
-	public List<QnaDTO> QnaList() throws Exception {
-		return qnaDAO.QnaList();
+	public List<QnaDTO> qnaList() throws Exception {
+		return qnaDAO.qnaList();
 	}
+
+	@Override
+	public QnaDTO qnaDetail(int qno) throws Exception {
+		return qnaDAO.qnaDetail(qno);
+	}
+
+	@Override
+	public void questionWrite(QnaDTO dto) throws Exception {
+		qnaDAO.questionWrite(dto);
+	}
+
+	@Override
+	public void answerWrite(QnaDTO adto) throws Exception {
+		qnaDAO.answerWrite(adto);
+	}
+	
+	
+	
 	
 	
 }

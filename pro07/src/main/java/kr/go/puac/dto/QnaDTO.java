@@ -12,7 +12,7 @@ public class QnaDTO {
 	private String regdate;
 	private int lev;
 	private int parno;
-	private char sec;
+	private String sec;
 	private int visited;
 	
 }

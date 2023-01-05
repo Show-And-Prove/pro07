@@ -46,3 +46,31 @@
 	.footer-logo { width: 200px; height: 40px; }
   	</style>
   	
+	<style>
+	/* footer 하단 고정 [S] */
+	html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+	
+	#body-wrapper {
+		min-height: 100%;
+		position: relative;
+	}
+	
+	#body-content {
+		margin-top: 30px;
+		padding-bottom: 150px; /* footer의 높이 */
+	}
+	
+	footer {
+		width: 100%;
+		height: 150px; /* footer의 높이 */
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	/* footer 하단 고정 [E] */
+	</style>  	
+  	

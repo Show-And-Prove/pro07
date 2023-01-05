@@ -49,14 +49,14 @@
 				</td>
 				<td>
 				<c:if test="${vo.lev==0}">
-					<%-- <c:if test='${vo.sec.equals("Y")}'>
-						<c:if test='${sid.equals(vo.author) || sid.equals("admin")}'> --%>
+				<c:if test='${vo.sec.equals("Y")}'>
+						<c:if test='${sid.equals(vo.author) || sid.equals("admin")}'>
 							<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
-						<%-- </c:if>
+						</c:if>
 						<c:if test='${empty sid }'>
 							<span>${vo.title }</span>
 						</c:if>	
-					</c:if>		 --%>
+					</c:if>
 					<c:if test='${vo.sec.equals("N") && not empty sid}'>	
 						<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
 					</c:if>		

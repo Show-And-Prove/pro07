@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="footer-logo"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="regdate"/>
+			<item value="parqno"/>
+			<item value="no"/>
+			<item value="re"/>
+			<item value="resdate"/>
+			<item value="vo"/>
 			<item value="footer-logo"/>
 			<item value="seq"/>
 			<item value="sid"/>
@@ -17,9 +23,11 @@
 			<item value="aspectjrt"/>
 			<item value="asp"/>
 			<item value="as"/>
-			<item value="junit"/>
 		</list>
 		<list key="replacehistory">
+			<item value="parno"/>
+			<item value="qno"/>
+			<item value="qnaDetail"/>
 			<item value="bid"/>
 		</list>
 	</section>
