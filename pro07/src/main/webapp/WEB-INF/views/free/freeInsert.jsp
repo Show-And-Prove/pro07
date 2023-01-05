@@ -15,19 +15,17 @@
     <script type="text/javascript" src="${path1 }/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
-<header class="">
 	<jsp:include page="../include/header.jsp" />
-</header>
 <div class="content1" id="content1">
-	    <div class="row column text-center">
-	      <h2 class="h1">글 등록</h2>
+	    <div>
+	      <h2>글 등록</h2>
 	      <hr>
 	      <div class="container">
 	      	<form action="${path1 }/free/insert.do" method="post">
 			      <table id="table1">
 			      	<tbody>
 			      		<tr>
-			      			<th style="background-color:#dcdcdc">글 제목</th>
+			      			<th>글 제목</th>
 			      			<td>
 			      				<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
 			      			</td>
@@ -54,12 +52,6 @@
 	    </div>
 	</div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    <footer id="footer">
     	<jsp:include page="../include/footer.jsp"></jsp:include>
-    </footer>
 </body>
 </html>

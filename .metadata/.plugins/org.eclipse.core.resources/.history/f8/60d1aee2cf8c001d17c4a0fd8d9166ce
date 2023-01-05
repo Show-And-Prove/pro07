@@ -1,0 +1,10 @@
+package kr.go.puac;
+
+import java.util.Map;
+
+public class RestService {
+
+	public Map<String, String> getTest1(@PathVariable("id") String id, @PathVariable("pw") String pw) {
+		
+	}
+}

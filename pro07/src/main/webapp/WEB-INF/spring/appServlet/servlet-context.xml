@@ -21,6 +21,7 @@
 	<resources mapping="/util/**" location="/WEB-INF/views/util" />
 	<resources mapping="/data/**"	 location="/WEB-INF/views/data" />
 	<resources mapping="/member/**" location="/WEB-INF/views/member" />
+	<resources mapping="/api/**" location="/WEB-INF/views/api" />
 	
 	
 	<resources mapping="/intro/**" location="/WEB-INF/views/intro" />
