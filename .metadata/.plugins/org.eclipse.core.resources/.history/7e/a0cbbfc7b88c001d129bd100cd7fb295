@@ -1,0 +1,7 @@
+package kr.go.puac.controller;
+
+@Controller
+@RequestMapping("/free/*")
+public class FreeController {
+
+}

@@ -1,0 +1,6 @@
+package kr.go.puac.model;
+
+@Repository
+public class FreeDAOImpl implements FreeDAO {
+
+}

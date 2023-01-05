@@ -24,4 +24,12 @@
 			title=#{title}, content=#{content}
 		where bid=#{bid} 
 	</update>
+	
+	<!-- 조회수 증가 - transaction 사용 -->
+	<update id="upCnt">
+		update board
+			set
+			cnt=cnt+1
+		where bid=#{bid}
+	</update>
 </mapper>

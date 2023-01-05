@@ -288,15 +288,15 @@
   </div>
   <div class="col-sm-4">
     <div class="well">
-      <p>새소식<br><a href="${path1 }/board/list">·2022 정부포상 수여식 개최</a>
+      <p>새소식<br><a href="${path1 }/board/detail.do?bid=2">·2022 정부포상 수여식 개최</a>
       </p>
     </div>
     <div class="well">
-       <p>공지사항<br><a href="${path1 }/board/list">·사무처 공무직 근로자(비서) 채용 공고
+       <p>공지사항<br><a href="${path1 }/board/detail.do?bid=1">·사무처 공무직 근로자(비서) 채용 공고
 </a></p>
     </div>
     <div class="well">
-       <p>보도자료<br><a href="${path1 }/board/list">·고위공무원 전보(2022.12.26.자)
+       <p>보도자료<br><a href="${path1 }/free/detail.do?fid=1">·고위공무원 전보(2022.12.26.자)
 </a></p>
     </div>
   </div>

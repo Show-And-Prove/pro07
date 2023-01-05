@@ -1,0 +1,49 @@
+package kr.go.puac.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.go.puac.dto.FreeDTO;
+import kr.go.puac.model.FreeDAO;
+
+@Service
+public class FreeServiceImpl implements FreeService {
+	
+	@Autowired
+	FreeDAO freeDAO;
+
+	@Override
+	public List<FreeDTO> freeList() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FreeDTO freeDetail(int fno) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void freeInsert(FreeDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void freeDelete(int fno) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void freeEdit(FreeDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

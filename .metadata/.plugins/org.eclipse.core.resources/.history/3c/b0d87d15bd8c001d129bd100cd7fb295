@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="free">
+	<select id="freeList" resultType="kr.go.puac.dto.FreeDTO">
+		select * from free
+	</select>
+	
+	<select id="freeDetail" resultType="kr.go.puac.dto.FreeDTO">
+		select * from free where fno = #{fno}
+	</select>
+	
+	<update id="upVisited">
+		update free
+			set
+			visited = visited+1
+		where fno=#{fno}
+	</update>
+	
+	<insert id="freeInsert">
+		insert into free values ((select nvl(max(fno),0)+1 from free), #{title}, #{content}, default, 'admin', default)
+	</insert>
+	
+	<delete id="freeDelete">
+		delete from free where fno=#{fno}
+	</delete>
+	
+	<update id="freeEdit">
+		update free set title=#{title}, content=#{content} where fno=#{fno}
+	</update>
+</mapper>

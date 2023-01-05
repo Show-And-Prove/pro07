@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import kr.go.puac.dto.BoardDTO;
 
@@ -19,8 +20,10 @@ public class BoardDAOImpl implements BoardDAO{
 		return sqlSession.selectList("board.boardList");
 	}
 
+	@Transactional
 	@Override
 	public BoardDTO boardDetail(int bid) throws Exception {
+		sqlSession.update("board.upCnt", bid);
 		return sqlSession.selectOne("board.boardDetail",bid);
 	}
 
