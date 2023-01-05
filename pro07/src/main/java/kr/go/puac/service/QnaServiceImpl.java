@@ -33,6 +33,18 @@ public class QnaServiceImpl implements QnaService {
 	public void answerWrite(QnaDTO adto) throws Exception {
 		qnaDAO.answerWrite(adto);
 	}
+
+	@Override
+	public void qDelete(int qno) throws Exception {
+		qnaDAO.qDelete(qno);
+	}
+
+	@Override
+	public void qEdit(QnaDTO dto) throws Exception {
+		qnaDAO.qEdit(dto);
+	}
+	
+	
 	
 	
 	

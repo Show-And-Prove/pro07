@@ -78,17 +78,17 @@
 				<c:set var="lev" value="${qnaDetail.lev }"/>
 				<c:if test="${qnaDetail.lev eq 0 }">
 					<a href='aWrite.do?qno=${qnaDetail.qno }' class="button is-primary">답변 하기</a>
-					<a href='UpdateQnaCtrl.do?qno=${qnaDetail.qno }' class="button is-info">글 수정</a>
-					<a href='DeleteQnaCtrl.do?parno=${qnaDetail.qno }' class="button is-danger">글 삭제</a>
+					<a href='edit.do?qno=${qnaDetail.qno }' class="button is-info">글 수정</a>
+					<a href='delete.do?parno=${qnaDetail.qno }' class="button is-danger">글 삭제</a>
 				</c:if>	
 				<c:if test="${qnaDetail.lev eq 1 }">
-					<a href='UpdateQnaCtrl.do?qno=${qnaDetail.qno }' class="button is-info">답글 수정</a>
-					<a href='DeleteQnaCtrl.do?qno=${qnaDetail.qno }' class="button is-danger">답글 삭제</a>
+					<a href='edit.do?qno=${qnaDetail.qno }' class="button is-info">답글 수정</a>
+					<a href='delete.do?qno=${qnaDetail.qno }' class="button is-danger">답글 삭제</a>
 				</c:if>	
 			</c:if>	
 			<c:if test="${sid eq qnaDetail.author }">
-				<a href='UpdateQnaCtrl.do?qno=${qnaDetail.qno }' class="button is-info">글 수정</a>
-				<a href='DeleteQnaCtrl.do?parno=${qnaDetail.qno }' class="button is-danger">글 삭제</a>
+				<a href='edit.do?qno=${qnaDetail.qno }' class="button is-info">글 수정</a>
+				<a href='delete.do?qno=${qnaDetail.qno }' class="button is-danger">글 삭제</a>
 			</c:if>		
 			<c:if test="${sid ne qnaDetail.author}">
 				<p style="clear:both">글 작성자가 아닙니다.</p>

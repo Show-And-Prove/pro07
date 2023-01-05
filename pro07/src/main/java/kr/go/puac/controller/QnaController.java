@@ -88,4 +88,38 @@ public class QnaController {
 		
 		return "redirect:list.do";
 	}
+	
+	@GetMapping("delete")
+	public String qDelete(HttpServletRequest request, Model model) throws Exception {
+		
+		int qno = Integer.parseInt(request.getParameter("qno"));
+		qnaService.qDelete(qno);
+		
+		return "redirect:list.do";
+	}
+	
+	@GetMapping("edit")
+	public String editForm(HttpServletRequest request, Model model) throws Exception {
+		int qno = Integer.parseInt(request.getParameter("qno"));
+		
+		QnaDTO dto = qnaService.qnaDetail(qno);
+		model.addAttribute("dto", dto);
+		return "qna/qnaUpdate";
+	}
+	
+	@PostMapping("edit")
+	public String qEdit(HttpServletRequest request, Model model) throws Exception {
+		int qno = Integer.parseInt(request.getParameter("qno"));
+		
+		QnaDTO dto = new QnaDTO();
+		dto.setQno(qno);
+		dto.setTitle(request.getParameter("title"));
+		dto.setContent(request.getParameter("content"));
+		dto.setSec(request.getParameter("sec"));
+		
+		qnaService.qEdit(dto);
+		
+		return "redirect:list.do";
+	}
+	
 }

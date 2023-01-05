@@ -33,6 +33,17 @@ public class QnaDAOImpl implements QnaDAO {
 	public void answerWrite(QnaDTO adto) throws Exception {
 		sqlSession.insert("qna.answerWrite", adto);
 	}
+
+	@Override
+	public void qDelete(int qno) throws Exception {
+		sqlSession.delete("qna.qDelete",qno);
+	}
+
+	@Override
+	public void qEdit(QnaDTO dto) throws Exception {
+		sqlSession.update("qna.qEdit", dto);
+	}
+	
 	
 	
 	

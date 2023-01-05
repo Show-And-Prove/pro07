@@ -1,9 +1,0 @@
-package kr.go.puac.controller;
-
-import org.springframework.stereotype.Controller;
-
-@Controller
-@RequestMapping("/qna/*")
-public class QnaController {
-
-}

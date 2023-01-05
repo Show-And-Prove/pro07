@@ -10,6 +10,6 @@ public interface QnaDAO {
 	public QnaDTO qnaDetail(int qno) throws Exception;
 	public void questionWrite(QnaDTO dto) throws Exception;
 	public void answerWrite(QnaDTO adto) throws Exception;
-	
-	
+	public void qDelete(int qno) throws Exception;
+	public void qEdit(QnaDTO dto) throws Exception;
 }
