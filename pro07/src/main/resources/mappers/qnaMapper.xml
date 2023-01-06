@@ -14,11 +14,10 @@
 	
 	<!-- 질문 작성 -->
 	<insert id="questionWrite">
-		insert into qna(title, content, author, lev, sec) values (#{title},#{content},#{author},#{lev},#{sec})
+		insert into qna(title, content, author, lev, parno, sec) values (#{title},#{content},#{author},#{lev}, (select COALESCE(max(qno),0)+1 from qna), #{sec})
 	</insert>
 	
 	<!-- 답변 작성 -->
-	<!-- parno - 어떤 질문에 대한 답변인지 구분 -->
 	<insert id="answerWrite">
 		insert into qna(title, content, author, lev, parno, sec) values (#{title},#{content},#{author},#{lev},#{parno},#{sec})
 	</insert>
