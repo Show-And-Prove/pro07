@@ -57,7 +57,7 @@
 							<span>비밀글입니다.</span>
 						</c:if>	
 						<!-- 비밀글 처리 -->
-						<c:if test='${sid ne vo.author}'>
+						<c:if test='${sid ne vo.author || sid ne "admin"}'>
 							<span>비밀글입니다.</span>
 						</c:if>
 						<!-- 비밀글 처리 -->

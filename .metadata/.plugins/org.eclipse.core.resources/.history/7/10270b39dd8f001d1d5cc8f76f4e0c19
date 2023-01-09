@@ -57,7 +57,7 @@
 							<span>비밀글입니다.</span>
 						</c:if>	
 						<!-- 비밀글 처리 -->
-						<c:if test='${sid ne vo.author}'>
+						<c:if test='${sid ne vo.author || sid.equals("admin")}'>
 							<span>비밀글입니다.</span>
 						</c:if>
 						<!-- 비밀글 처리 -->
@@ -76,9 +76,6 @@
 						</c:if>
 						<c:if test='${empty sid }'>
 							<span style="padding-left:60px;">${vo.title }</span>				
-						</c:if>
-						<c:if test='${sid ne vo.author}'>
-							<span style="padding-left:60px;">비밀글입니다.</span>
 						</c:if>
 					</c:if>
 					<c:if test='${vo.sec.equals("N") && not empty sid}'>	

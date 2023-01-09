@@ -5,8 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
-<%-- <c:set var="path1" value="${pageContext.request.contextPath }" />   --%>
+<c:set var="path1" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,8 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>묻고 답하기</title>
     <jsp:include page="../include/head.jsp" />
-	<link rel="stylesheet" href="${path1 }/resource/datatables.min.css">
-	<script src="${path1 }/resource/datatables.min.js"></script>
+	<link rel="stylesheet" href="${path1 }/resources/datatables/datatables.min.css">
+	<script src="${path1 }/resources/datatables/datatables.min.js"></script>
 	<script>
 	$(document).ready( function () {
 	    $('#tb1').DataTable({
@@ -26,7 +25,7 @@
 	</script>
   </head>
   <body>
-  <jsp:include page="..include/header.jsp" />
+  <jsp:include page="../include/header.jsp" />
   <section class="section">
     <div class="container">
 		<h2 class="title">묻고 답하기</h2>
@@ -42,24 +41,29 @@
 				<td><span style="color:transparent">${vo.parno }</span></td>
 				<td>
 					<c:if test="${vo.lev==0}">
-						<span>${vo.no }</span>
+						<span>${vo.qno }</span>
 					</c:if>
 					<c:if test="${vo.lev==1}">
-						<span style="color:white">${vo.no }</span>
+						<span style="color:white">${vo.qno }</span>
 					</c:if>
 				</td>
 				<td>
 				<c:if test="${vo.lev==0}">
-					<c:if test='${vo.sec.equals("Y")}'>
+				<c:if test='${vo.sec.equals("Y")}'>
 						<c:if test='${sid.equals(vo.author) || sid.equals("admin")}'>
-							<a href="${path1 }/GetQnaDetailCtrl.do?no=${vo.no }">${vo.title }</a>
+							<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
 						</c:if>
-						<c:if test='${empty sid }'>
-							<span>${vo.title }</span>
+						<c:if test='${empty sid}'>
+							<span>비밀글입니다.</span>
 						</c:if>	
-					</c:if>		
+						<!-- 비밀글 처리 -->
+						<c:if test='${sid ne vo.author || sid ne admin}'>
+							<span>비밀글입니다.</span>
+						</c:if>
+						<!-- 비밀글 처리 -->
+					</c:if>
 					<c:if test='${vo.sec.equals("N") && not empty sid}'>	
-						<a href="${path1 }/GetQnaDetailCtrl.do?no=${vo.no }">${vo.title }</a>
+						<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
 					</c:if>		
 					<c:if test='${vo.sec.equals("N") && empty sid}'>
 						<span>${vo.title }</span>
@@ -68,14 +72,14 @@
 				<c:if test="${vo.lev==1}">
 					<c:if test='${vo.sec.equals("Y")}'>
 						<c:if test='${sid.equals(vo.author) || sid.equals("admin")}'>
-							<a href="${path1 }/GetQnaDetailCtrl.do?no=${vo.no }">${vo.title }</a>
+							<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
 						</c:if>
 						<c:if test='${empty sid }'>
 							<span style="padding-left:60px;">${vo.title }</span>				
 						</c:if>
 					</c:if>
 					<c:if test='${vo.sec.equals("N") && not empty sid}'>	
-						<a href="${path1 }/GetQnaDetailCtrl.do?no=${vo.no }" style="padding-left:60px;">${vo.title }</a>
+						<a href="${path1 }/qna/detail?qno=${vo.qno }" style="padding-left:60px;">${vo.title }</a>
 					</c:if>							
 					<c:if test='${vo.sec.equals("N") && empty sid}'>
 				 		<span style="padding-left:60px;">${vo.title }</span>
@@ -84,8 +88,7 @@
 				</td>
 				<td>${vo.author }</td>
 				<td>
-					<fmt:parseDate value="${vo.resDate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />	<!--  -->
-		      		<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
+					${vo.regdate }
 		      	</td>
 			</tr>
 			</c:forEach>	
@@ -93,11 +96,23 @@
 		</table>
 		<c:if test='${not empty sid}'>
 		<div class="btn-group">
-			<a href="${path1 }/qna/qnaWrite.jsp" class="button is-dark">글 등록</a>
+			<a href="${path1 }/qna/qWrite" class="btn btn-default">글 등록</a>
 		</div>
 		</c:if>
-		</div>	
+		<c:if test='${empty sid}'>
+		<div class="btn-group">
+			<a class="btn btn-default" id="not-member" href="${path1 }/member/loginForm" class="button is-dark">글 등록</a>
+		</div>		
+		</c:if>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$("#not-member").click(function() {
+					alert("민원 신청은 회원만 할 수 있습니다. 로그인 후 이용해주세요.");
+				});
+			});
+		</script>			
 	</section>
-  <jsp:include page="/footer.jsp"></jsp:include>
+  <jsp:include page="../include/footer.jsp"></jsp:include>
   </body>
 </html>

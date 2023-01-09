@@ -77,9 +77,6 @@
 						<c:if test='${empty sid }'>
 							<span style="padding-left:60px;">${vo.title }</span>				
 						</c:if>
-						<c:if test='${sid ne vo.author}'>
-							<span style="padding-left:60px;">비밀글입니다.</span>
-						</c:if>
 					</c:if>
 					<c:if test='${vo.sec.equals("N") && not empty sid}'>	
 						<a href="${path1 }/qna/detail?qno=${vo.qno }" style="padding-left:60px;">${vo.title }</a>
