@@ -14,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>질문하기</title>
     <jsp:include page="../include/head.jsp" />
-	<link rel="stylesheet" href="${path1 }/resource/datatables.min.css">
-	<script src="${path1 }/resource/datatables.min.js"></script>
   </head>
   <body>
   <jsp:include page="../include/header.jsp" />
@@ -53,9 +51,9 @@
 						</tr>
 					</tbody>
 				</table>
-				<div class="btn-group">
-					<button type="submit" class="button is-primary">글 쓰기</button>
-					<a href="<%=request.getContextPath() %>/qna/list" class="button is-info">목록으로</a>
+				<div class="btn btn-default">
+					<button type="submit" class="btn btn-default">글 쓰기</button>
+					<a href="<%=request.getContextPath() %>/qna/list" class="btn btn-default">목록으로</a>
 				</div>
 			</form>
 		</div>	

@@ -37,6 +37,13 @@
 		where qno=#{qno} 
 	</update>
 	
+	<!-- 조회수 -->
+	<update id="upVisited">
+		update qna
+		set
+			visited=visited+1
+		where qno=#{qno}
+	</update>
 
 
 

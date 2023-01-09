@@ -26,4 +26,10 @@ public class RestDAO {
 		sqlSession.insert("sample.addSample", sample);
 	}
 	
+	public void updateSample(SampleDTO sample) throws Exception {
+		sqlSession.update("sample.updateSample", sample);
+	}
+	public void deleteSample(String id) throws Exception {
+		sqlSession.delete("sample.deleteSample", id);
+	}
 }

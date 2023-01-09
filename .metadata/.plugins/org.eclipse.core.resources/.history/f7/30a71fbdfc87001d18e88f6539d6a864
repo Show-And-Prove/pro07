@@ -1,8 +1,0 @@
-package kr.go.puac.model;
-
-import org.springframework.stereotype.Repository;
-
-@Repository
-public class MemberDAOImpl implements MemberDAO {
-
-}

@@ -48,10 +48,24 @@
       	</c:forEach>	
       	</tbody>
       </table>
+      	<c:if test='${not empty sid}'>
 		<div class="button-group">
-			<a class="button" href="${path1 }/free/insert.do">글쓰기</a>
+			<a class="btn btn-default" href="${path1 }/free/insert.do">글쓰기</a>
 		</div>
+		</c:if>
+		<c:if test='${empty sid}'>
+		<div class="button-group">
+			<a class="btn btn-default" id="not-member" href="${path1 }/member/loginForm">글쓰기</a>
+		</div>
+		</c:if>
     </div>
+		<script>
+			$(document).ready(function() {
+				$("#not-member").click(function() {
+					alert("글 작성은 회원만 가능합니다. 로그인 후 이용해주세요.");
+				});
+			});
+		</script>		    
 	
     	<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>

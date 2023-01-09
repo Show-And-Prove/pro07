@@ -53,9 +53,14 @@
 						<c:if test='${sid.equals(vo.author) || sid.equals("admin")}'>
 							<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
 						</c:if>
-						<c:if test='${empty sid }'>
-							<span>${vo.title }</span>
+						<c:if test='${empty sid}'>
+							<span>비밀글입니다.</span>
 						</c:if>	
+						<!-- 비밀글 처리 -->
+						<c:if test='${sid ne vo.author}'>
+							<span>비밀글입니다.</span>
+						</c:if>
+						<!-- 비밀글 처리 -->
 					</c:if>
 					<c:if test='${vo.sec.equals("N") && not empty sid}'>	
 						<a href="${path1 }/qna/detail?qno=${vo.qno }">${vo.title }</a>
@@ -91,10 +96,22 @@
 		</table>
 		<c:if test='${not empty sid}'>
 		<div class="btn-group">
-			<a href="${path1 }/qna/qWrite" class="button is-dark">글 등록</a>
+			<a href="${path1 }/qna/qWrite" class="btn btn-default">글 등록</a>
 		</div>
 		</c:if>
-		</div>	
+		<c:if test='${empty sid}'>
+		<div class="btn-group">
+			<a class="btn btn-default" id="not-member" href="${path1 }/member/loginForm" class="button is-dark">글 등록</a>
+		</div>		
+		</c:if>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$("#not-member").click(function() {
+					alert("민원 신청은 회원만 할 수 있습니다. 로그인 후 이용해주세요.");
+				});
+			});
+		</script>			
 	</section>
   <jsp:include page="../include/footer.jsp"></jsp:include>
   </body>

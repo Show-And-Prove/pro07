@@ -14,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>묻고 답하기</title>
     <jsp:include page="../include/head.jsp" />
-	<link rel="stylesheet" href="${path1 }/resource/datatables.min.css">
-	<script src="${path1 }/resource/datatables.min.js"></script>
   </head>
   <body>
   <jsp:include page="../include/header.jsp" />
@@ -73,22 +71,22 @@
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<a href="${path1 }/GetQnaListCtrl.do" class="button is-info">목록으로</a>
+			<a href="${path1 }/qna/list" class="btn btn-default">목록으로</a>
 			<c:if test='${sid eq "admin" }'>
 				<c:set var="lev" value="${qnaDetail.lev }"/>
 				<c:if test="${qnaDetail.lev eq 0 }">
-					<a href='aWrite.do?qno=${qnaDetail.qno }' class="button is-primary">답변 하기</a>
-					<a href='edit.do?qno=${qnaDetail.qno }' class="button is-info">글 수정</a>
-					<a href='delete.do?parno=${qnaDetail.qno }' class="button is-danger">글 삭제</a>
+					<a href='aWrite.do?qno=${qnaDetail.qno }' class="btn btn-default">답변 하기</a>
+					<a href='edit.do?qno=${qnaDetail.qno }' class="btn btn-default">글 수정</a>
+					<a href='delete.do?parno=${qnaDetail.qno }' class="btn btn-default">글 삭제</a>
 				</c:if>	
 				<c:if test="${qnaDetail.lev eq 1 }">
-					<a href='edit.do?qno=${qnaDetail.qno }' class="button is-info">답글 수정</a>
-					<a href='delete.do?qno=${qnaDetail.qno }' class="button is-danger">답글 삭제</a>
+					<a href='edit.do?qno=${qnaDetail.qno }' class="btn btn-default">답글 수정</a>
+					<a href='delete.do?qno=${qnaDetail.qno }' class="btn btn-default">답글 삭제</a>
 				</c:if>	
 			</c:if>	
 			<c:if test="${sid eq qnaDetail.author }">
-				<a href='edit.do?qno=${qnaDetail.qno }' class="button is-info">글 수정</a>
-				<a href='delete.do?qno=${qnaDetail.qno }' class="button is-danger">글 삭제</a>
+				<a href='edit.do?qno=${qnaDetail.qno }' class="btn btn-default">글 수정</a>
+				<a href='delete.do?qno=${qnaDetail.qno }' class="btn btn-default">글 삭제</a>
 			</c:if>		
 			<c:if test="${sid ne qnaDetail.author}">
 				<p style="clear:both">글 작성자가 아닙니다.</p>

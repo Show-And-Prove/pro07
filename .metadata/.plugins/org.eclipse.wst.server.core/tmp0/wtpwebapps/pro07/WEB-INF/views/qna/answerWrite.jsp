@@ -6,7 +6,6 @@
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
 <c:set var="path1" value="<%=request.getContextPath() %>" />
-<%-- <c:set var="path1" value="${pageContext.request.contextPath }" />   --%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,8 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>답변 하기</title>
     <jsp:include page="../include/head.jsp" />
-	<link rel="stylesheet" href="${path1 }/resource/datatables.min.css">
-	<script src="${path1 }/resource/datatables.min.js"></script>
   </head>
   <body>
   <jsp:include page="../include/header.jsp" />
@@ -35,12 +32,12 @@
 						</tr>
 						<tr>
 							<th><label for="title">답변 제목</label></th>
-							<td><input type="text" name="title" id="title" placeholder="제목 입력" class="input" required></td>
+							<td><input type="text" name="title" id="title" placeholder="제목 입력" class="form-control" required></td>
 						</tr>
 						<tr>
 							<th><label for="content">답변 내용</label></th>
 							<td>
-								<textarea cols="100" rows="6" name="content" id="content" class="textarea"></textarea>
+								<textarea cols="100" rows="6" name="content" id="content" class="form-control"></textarea>
 							</td>
 						</tr>
 						<tr>

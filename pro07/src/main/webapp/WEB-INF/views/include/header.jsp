@@ -43,8 +43,9 @@
         		<a class="dropdown-toggle" data-toggle="dropdown" href="#">국민참여
         		<span class="caret"></span></a>
         		<ul class="dropdown-menu">
-          			<li><a href="${path1 }/free/list">평화통일정책제안</a></li><!-- 자유게시판 -->
+          			<li><a href="${path1 }/board/list">평화통일정책제안</a></li><!-- 게시판 or 자유게시판 -->
           			<li><a href="${path1 }/qna/list">민원신청</a></li><!-- QnA -->
+          			<li><a href="${path1 }/free/list">자유게시판</a></li><!-- 자유게시판 -->
         		</ul>
       		</li>      		
 	      </ul>

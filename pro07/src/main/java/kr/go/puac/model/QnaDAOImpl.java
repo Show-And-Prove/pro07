@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import kr.go.puac.dto.QnaDTO;
 
@@ -20,7 +21,9 @@ public class QnaDAOImpl implements QnaDAO {
 	}
 
 	@Override
+	@Transactional
 	public QnaDTO qnaDetail(int qno) throws Exception {
+		sqlSession.update("qna.upVisited", qno);
 		return sqlSession.selectOne("qna.qnaDetail", qno);
 	}
 
