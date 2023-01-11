@@ -1,5 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<memento>
-<attribute name="tableColumnWidths" value="20:50:130:190:260"/>
-<attribute name="tableColumnSorter" value="2:128"/>
-</memento>
+<memento>&#x0A;<attribute name="tableColumnWidths" value="20:50:130:190:260"/>&#x0A;<attribute name="tableColumnSorter" value="2:128"/>&#x0A;</memento>

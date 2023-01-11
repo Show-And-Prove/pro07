@@ -67,9 +67,7 @@
 							<tr>
 								<th><label for="birth" >생년월일</label></th>
 								<td>
-									<fmt:parseDate value="${member.birth }" var="birth" pattern="yyyy-MM-dd HH:mm:ss" />
-	      							<span style="display:none"><fmt:formatDate var="br" value="${birth }" pattern="yyyy-MM-dd" /></span>
-									<input type="date" name="birth" id="birth" value="${br }" class="single100">
+									<input type="date" name="birth" id="birth" value="${member.birth }" class="single100">
 								</td>
 							</tr>
 							<tr>

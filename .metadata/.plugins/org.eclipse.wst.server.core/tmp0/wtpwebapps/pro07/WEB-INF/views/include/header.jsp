@@ -60,6 +60,7 @@
         	</c:if>  
         	<c:if test='${sid eq "admin"}'>
           		<li><a href="${path1 }/admin/main">관리자 페이지</a></li>
+          		<li><a href="${path1 }/member/list">회원목록</a></li>
         	</c:if>  
 	      </ul>
 	    </div>
