@@ -19,6 +19,8 @@ import kr.go.puac.service.BoardService;
 @RequestMapping("/board/*")
 public class BoardController {
 
+	
+	
 	@Autowired
 	BoardService boardService;
 	

@@ -1,2 +1,3 @@
 content-types/org.eclipse.core.runtime.text/charset=UTF-8
+content-types/org.eclipse.wst.xml.core.xmlsource/file-names=NewFile.ucls
 eclipse.preferences.version=1

@@ -58,7 +58,7 @@
 						</c:if>	
 						<!-- 비밀글 처리 -->
 						<c:if test='${sid ne vo.author}'>
-							<span>비밀글입니다.</span>
+							<span>   ★비밀글입니다.</span>
 						</c:if>
 						<!-- 비밀글 처리 -->
 					</c:if>
@@ -99,12 +99,12 @@
 		</table>
 		<c:if test='${not empty sid}'>
 		<div class="btn-group">
-			<a href="${path1 }/qna/qWrite" class="btn btn-default">글 등록</a>
+			<a href="${path1 }/qna/qWrite" class="btn btn-default">민원 작성</a>
 		</div>
 		</c:if>
 		<c:if test='${empty sid}'>
 		<div class="btn-group">
-			<a class="btn btn-default" id="not-member" href="${path1 }/member/loginForm" class="button is-dark">글 등록</a>
+			<a class="btn btn-default" id="not-member" href="${path1 }/member/loginForm" class="button is-dark">민원 작성</a>
 		</div>		
 		</c:if>
 		</div>

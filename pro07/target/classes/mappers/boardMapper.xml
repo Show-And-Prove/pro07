@@ -32,4 +32,9 @@
 			cnt=cnt+1
 		where bid=#{bid}
 	</update>
+	
+	<!-- 삭제 -->
+	<delete id="boardDelete">
+		delete from board where bid=#{bid}
+	</delete>
 </mapper>
